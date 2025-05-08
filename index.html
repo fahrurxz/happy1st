@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hihi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop>
+        <source src="music/best.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="music-toggle" id="musicToggle">
+            <i class="fas fa-music"></i>
+                </button>
+        <!-- <span class="music-info"></span> -->
+            </div>
+
+    <!-- Audio Element -->
+    <audio id="spaceMusic" loop>
+        <source src="music/space.mp3" type="audio/mp3">
+    </audio>
+
+    <div id="startOverlay" class="start-overlay">
+      <div class="start-content">
+        <h2>Hai ayang 💖</h2>
+        <!-- <p>Tap untuk mulai 🚀</p> -->
+        <button id="startBtn" class="tap-button">Play</button>
+        </div>
+    </div>
+
+    <!-- Scene 1: Tebak Foto di Luar Angkasa -->
+    <section id="scene-space" class="scene active">
+        <div class="stars"></div>
+        <div class="stars-bg"></div>
+        <div class="space-instruction">
+          Coba pilih salah satu ✨
+                </div>
+        <div class="floating-photos">
+            <div class="astro-photo-wrap"><img src="images/1.png" class="astro-photo" data-correct="true" alt="Pasangan"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/11.jpg" class="astro-photo" alt="Astro 2"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/12.jpg" class="astro-photo" alt="Astro 3"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/13.jpg" class="astro-photo" alt="Astro 4"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/14.jpg" class="astro-photo" alt="Astro 5"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/15.jpg" class="astro-photo" alt="Astro 6"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/16.jpg" class="astro-photo" alt="Astro 7"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/17.jpg" class="astro-photo" alt="Astro 8"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/18.jpg" class="astro-photo" alt="Astro 9"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/19.jpg" class="astro-photo" alt="Astro 10"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/20.jpg" class="astro-photo" alt="Astro 11"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/21.jpg" class="astro-photo" alt="Astro 12"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/22.jpg" class="astro-photo" alt="Astro 13"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/23.jpg" class="astro-photo" alt="Astro 14"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/24.jpg" class="astro-photo" alt="Astro 15"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/25.jpg" class="astro-photo" alt="Astro 16"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/26.jpg" class="astro-photo" alt="Astro 17"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/27.jpg" class="astro-photo" alt="Astro 18"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/28.jpg" class="astro-photo" alt="Astro 19"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/29.jpg" class="astro-photo" alt="Astro 20"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/30.jpg" class="astro-photo" alt="Astro 21"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/31.jpg" class="astro-photo" alt="Astro 22"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/32.jpg" class="astro-photo" alt="Astro 23"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/33.jpg" class="astro-photo" alt="Astro 24"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/34.jpg" class="astro-photo" alt="Astro 25"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/35.jpg" class="astro-photo" alt="Astro 26"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/36.jpg" class="astro-photo" alt="Astro 27"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/37.jpg" class="astro-photo" alt="Astro 28"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/38.jpg" class="astro-photo" alt="Astro 29"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/39.jpg" class="astro-photo" alt="Astro 30"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/40.jpg" class="astro-photo" alt="Astro 31"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/41.jpg" class="astro-photo" alt="Astro 32"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/42.jpg" class="astro-photo" alt="Astro 33"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/43.jpg" class="astro-photo" alt="Astro 34"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/44.jpg" class="astro-photo" alt="Astro 35"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/45.jpg" class="astro-photo" alt="Astro 36"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/46.jpg" class="astro-photo" alt="Astro 37"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/47.jpg" class="astro-photo" alt="Astro 38"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/48.jpg" class="astro-photo" alt="Astro 39"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/49.jpg" class="astro-photo" alt="Astro 40"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/50.jpg" class="astro-photo" alt="Astro 41"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/51.jpg" class="astro-photo" alt="Astro 42"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/52.jpg" class="astro-photo" alt="Astro 43"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/53.jpg" class="astro-photo" alt="Astro 44"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/54.jpg" class="astro-photo" alt="Astro 45"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/55.jpg" class="astro-photo" alt="Astro 46"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/56.jpg" class="astro-photo" alt="Astro 47"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/57.jpg" class="astro-photo" alt="Astro 48"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/58.jpg" class="astro-photo" alt="Astro 49"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/59.jpg" class="astro-photo" alt="Astro 50"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/60.jpg" class="astro-photo" alt="Astro 51"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/61.jpg" class="astro-photo" alt="Astro 52"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/62.jpg" class="astro-photo" alt="Astro 53"></div>
+            <div class="astro-photo-wrap"><img src="https://randomuser.me/api/portraits/men/63.jpg" class="astro-photo" alt="Astro 54"></div>
+            
+            
+
+            
+
+                        </div>
+        <div class="space-message" id="spaceMessage"></div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section">
+        <div class="stars"></div>
+        <div class="quiz-slide" data-quiz="1">
+            <h2 class="section-title">🎯</h2>
+                        <p>Kamu inget nggak, kita pertama kali ketemu dimana?</p>
+                        <div class="quiz-options">
+                <button class="quiz-option">Di Pantai</button>
+                <button class="quiz-option">Di Gazebo</button>
+                <button class="quiz-option">Di Jalan</button>
+                        </div>
+                    </div>
+        <div class="quiz-slide" data-quiz="2">
+            <h2 class="section-title">🎯</h2>
+            <p>Anime favorit kita berdua apa ya?</p>
+                        <div class="quiz-options">
+                <button class="quiz-option">One Piece</button>
+                <button class="quiz-option">Naruto</button>
+                <button class="quiz-option">Demon Slayer</button>
+                        </div>
+                    </div>
+        <div class="quiz-slide" data-quiz="3">
+            <h2 class="section-title">Lulus jadi pacar idaman! 🎉</h2>
+                        <p>Kamu inget semua momen spesial kita! 💖</p>
+            <div class="love-anim"></div>
+            <img src="images/gambar.jpg" style="width: 100%; margin-top: 20px;" alt="">
+            <p>@ Rozi</p>
+            <!-- <button class="tap-button">Lanjut Yuk! 💫</button> -->
+            </div>
+        </section>
+
+    <!-- Scene 2: Story Slides -->
+    <section id="scene-story" class="scene">
+        <div class="stars"></div>
+        <div class="floating-counter" id="counterStory"></div>
+        <div class="story-slide" data-slide="1">
+            <div class="story-text">Hari ini, setahun lalu, aku dan kamu mulai petualangan bareng. 🌌</div>
+            <button class="tap-button">Tap untuk lanjut</button>
+        </div>
+        <div class="story-slide" data-slide="2">
+            <div class="story-text">Banyak momen seru, ketawa, kadang debat receh, tapi selalu balik saling sayang. 💫</div>
+            <button class="tap-button">Tap untuk lanjut</button>
+                </div>
+        <div class="story-slide" data-slide="3">
+            <div class="story-text">Makasih udah jadi temen, partner, dan support system aku. 🚀</div>
+            <button class="tap-button">Tap untuk lanjut</button>
+                </div>
+        <div class="story-slide" data-slide="4">
+            <div class="story-text">Siap lanjut ke babak baru bareng aku? 😁</div>
+            <button class="tap-button">Lanjut ke galeri</button>
+            </div>
+        </section>
+    <!-- Scene 3: Gallery Tap-to-Reveal -->
+    <section id="scene-gallery" class="scene" style="overflow: scroll;">
+        <div class="stars"></div>
+        <div class="floating-counter" id="counterGallery"></div>
+        <h2 class="section-title">Galeri Momen Kita 🚀</h2>
+        <div class="gallery-grid">
+            <div class="polaroid"><img src="images/1.png" alt="" class="gallery-img"></div>
+            <div class="polaroid"><img src="images/2.png" alt="" class="gallery-img"></div>
+            <div class="polaroid"><img src="images/3.png" alt="" class="gallery-img"></div>
+            <div class="polaroid"><img src="images/4.png" alt="" class="gallery-img"></div>
+    </div>
+        <button class="tap-button" style="margin-top: 20px;">Lanjut!</button>
+    </section>
+    <!-- Scene 4: Closing -->
+    <section id="scene-closing" class="scene">
+        <div class="stars"></div>
+        <div class="floating-counter" id="counterClosing"></div>
+        <div class="closing-content">
+            <h2 class="section-title">Happy 1st Anniversary! 🌠</h2>
+            <p class="quote">"Semesta boleh luas, tapi hatiku udah cukup diisi kamu aja."</p>
+            <button class="tap-button" id="hadiahBtn">Lihat hadiah dari aku 🎁</button>
+        </div>
+    </section>
+
+    <!-- Hadiah Popup -->
+    <div id="hadiahPopup" class="popup-overlay">
+      <div class="popup-content">
+        <button class="close-popup" id="closeHadiah">&times;</button>
+        <img src="images/love.png" alt="Hadiah" class="popup-img" style="max-width:90vw; max-height:70vh; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
