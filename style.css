@@ -247,9 +247,9 @@ body {
     width: 140px;
     min-height: 180px;
     margin: 0;
-    background: #fffbe6;
+    background: #262b3b;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    box-shadow: none;
     padding: 0.7rem;
     position: relative;
     transition: box-shadow 0.3s, transform 0.3s;
@@ -715,9 +715,9 @@ body {
     margin: 0 auto;
 }
 .polaroid {
-    background: #fffbe6;
+    background: #262b3b;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    box-shadow: none;
     padding: 0.7rem;
     width: 140px;
     min-height: 180px;
@@ -789,9 +789,9 @@ body {
     font-style: italic;
 }
 .tap-button {
-    background: #ffd6e0;
-    color: #222;
-    border: none;
+    background: #2a386d;
+    color: #fff;
+    border: 2px solid;
     border-radius: 50px;
     padding: 0.9rem 2.2rem;
     font-size: 1.1rem;
